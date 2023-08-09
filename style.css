@@ -1,0 +1,211 @@
+:root {
+    --primary-bg-color: #EFEFEF;
+    --secondary-bg-color: #535971;
+    --default-white-color: #FFF;
+    --text-color: #4E4958;
+    --bg-button-color: #FF5374;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--primary-bg-color);
+    font-family: 'Staatliches', cursive;
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 436px;
+
+    position: absolute;
+    z-index: -1;
+    background: var(--secondary-bg-color);
+}
+
+.page {
+    width: 750px;
+    margin: 0 auto;
+}
+
+header {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 18px;
+
+    padding-top: 140px;
+    margin-bottom: 58px;
+    color: var(--default-white-color);
+}
+
+header h1 {
+    text-transform: uppercase;
+
+    font-size: 48px;
+    font-weight: 400;
+}
+
+header p,
+form fieldset,
+fieldset .inputWrapper input {
+    font-family: 'Poppins', sans-serif;
+}
+
+form fieldset legend,
+fieldset h3,
+.formButtons button {
+    font-family: 'Staatliches', cursive;
+}
+
+header p {
+    width: 417px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 64px;
+    background: var(--default-white-color);
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    border: none;
+}
+
+form fieldset legend {
+    width: 100%;
+
+    color: var(--secondary-bg-color);
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+}
+
+form fieldset legend::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #E6E6F0;
+
+    margin-top: 16px;
+    margin-bottom: 36px;
+}
+
+fieldset .inputNameWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+fieldset .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+fieldset .inputWrapper label {
+    width: fit-content;
+    
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px
+}
+
+fieldset .inputWrapper label span {
+    color: #C1BCCC;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+
+    margin-left: 7px;
+}
+
+fieldset .inputWrapper label span:hover {
+    color: var(--text-color);
+}
+
+fieldset .inputWrapper input {
+    height: 56px;
+
+    color: var(--text-color);
+
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    background: #FAFAFC;
+
+    padding: 0 10px;
+}
+
+fieldset h3 {
+    color: var(--secondary-bg-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+fieldset .inputDateWrapper {
+    display: flex;
+    gap: 32px;
+}
+
+fieldset .inputDateWrapper > div:nth-child(1){
+    width: 300px;
+}
+
+.inputHourWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.inputHourWrapper .inputWrapper {
+    width: 140px;
+}
+
+.inputWrapper input:invalid {
+    outline: 1px solid #ff0000;
+}
+
+.formButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--secondary-bg-color);
+
+    padding: 53px 71px;
+    margin-bottom: 100px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.formButtons button {
+    width: 100%;
+    height: 56px;
+    background: var(--bg-button-color);
+    border: none;
+    border-radius: 20px;
+
+    color: var(--default-white-color);
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.formButtons button:hover {
+    background: #e24665;
+    cursor: pointer;
+}
